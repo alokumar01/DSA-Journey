@@ -134,7 +134,6 @@ int diameter(Node* root) { // O(n^2)
 }
 
 //Diameter of a tree optimised approach
-
 pair<int, int> diameter2(Node* root) {
     if (root == NULL) {
         return make_pair(0, 0); // (diameter, height)
@@ -203,7 +202,6 @@ void topView(Node* root) {
     }
     cout << endl;
 }
-
 
 //Kth level of tree
 void KthHelper(Node* root, int K, int currLevel) {
