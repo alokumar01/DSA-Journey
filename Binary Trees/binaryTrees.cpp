@@ -241,7 +241,7 @@ bool rootToNodePath(Node* root, int n, vector<int> &path) {  // TC- O(n), SC- O(
 
 }
 
-int LCA(Node* root, int n1, int n2) {
+int LCA(Node* root, int n1, int n2) {   
     vector<int> path1;
     vector<int> path2;
 
@@ -388,7 +388,7 @@ int main(){
     // int node = 5, K = 2;
     // KthAncestor(root, node, K);
 
-    transform(root);
+    // transform(root);
     levelOrder(root);
     return 0;
 }

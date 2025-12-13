@@ -78,7 +78,8 @@ int main() {
     // cout << "Root Node: " << root->data << endl;
     // preorder(root);
     // inorder(root);
-    postorder(root);
+    // postorder(root);
+    levelOrder(root);
 
     cout << endl;
 }
