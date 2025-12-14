@@ -36,11 +36,35 @@ public:
 
 [ Time taken: 1 hr 54 m 4 s ]
 I have solved this using DFS, with Time Complexity O(N), Space O(N), recursive stack.
-
 We can solve this by BFS(queue) as well, 
 
 
-
-
 //Below is solved using BFS
+    int goodNodes(TreeNode* root) {
+        //Using BFS, TC-->O(N), SC-->O(h)
+        if(!root) return 0;
 
+        int count = 0;
+        queue<pair<TreeNode*, int>> q;
+        q.push({root, root->val});
+
+        while(!q.empty()) {
+            auto [node, maxVal] = q.front();
+            q.pop();
+
+            if (node->val >= maxVal) {
+                count++;
+                maxVal = node->val;
+            }
+
+            if(node->left) {
+                q.push({ node->left, maxVal });
+            }
+
+            if(node->right) {
+                q.push({ node->right, maxVal });
+            }
+        }
+
+        return count;
+    }
