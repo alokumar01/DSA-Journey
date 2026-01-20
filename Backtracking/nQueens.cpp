@@ -137,7 +137,6 @@ class Solution {
         }
     }
     
-    
     vector<vector<int>> nQueen(int n) {
         vector<vector<char>> board;
         vector<vector<int>> result;
