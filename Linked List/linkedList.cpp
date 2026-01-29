@@ -175,6 +175,7 @@ public:
     void removeNth(int n)
     {
         int sz = size();
+        cout << sz <<endl;
         Node *prev = head;
 
         for (int i = 1; i < (sz - n); i++)
@@ -367,20 +368,19 @@ public:
         }
         return head;
     }
+    
+    //recursive for reverse the linked list
+    Node* reverseLL(Node* head) {
+        //base case
+        if (head == nullptr || head->next == nullptr)
+            return head;
+        
+        Node* rest = reverseLL(head->next);
+        head->next->next = head; //why
+        head->next = nullptr;
+        return rest;
+    }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -404,8 +404,8 @@ int main()
     // ll.reverse();
     // ll.printList();
 
-    // ll.removeNth(2);
-    // ll.printList();
+    ll.removeNth(2);
+    ll.printList();
 
     // ll.tail->next = ll.head; // head and tail is at same
     // ll.isCycle(ll.head);
@@ -420,14 +420,19 @@ int main()
     // ll.head = ll.mergeSort(ll.head);
     // ll.printList();
 
-    ll.head = ll.zigZagLL(ll.head);
-    ll.printList();
+    // ll.head = ll.zigZagLL(ll.head);
+    // ll.printList();
 
     // ll.push_back(4);
     // ll.push_back(5);
     // ll.printList();
 
     // ll.insert(100, 2);
+    // ll.printList();
+
+
+    //reverse the ll
+    // ll.head = ll.reverseLL(ll.head);
     // ll.printList();
 
     return 0;
