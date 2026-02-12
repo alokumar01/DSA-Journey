@@ -4,6 +4,7 @@ using namespace std;
 #include<list>
 #include<queue>
 #include<stack>
+#include <climits>
 
 class Edge {
 public:

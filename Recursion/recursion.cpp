@@ -17,7 +17,6 @@ using namespace std;
 // }
 
 // FIBONACCI NUMBER
-
 // int fibonacci(int n) {
 //     if (n == 0 || n == 1) {
 //         return n;    
@@ -32,12 +31,12 @@ using namespace std;
 
 
 // CHECK ARRAY IS SORTED OR NOT USING RECURSIN
-
 // bool isSorted(int arr[], int n, int i) {
 //     if (i == n - 1) return true;
 //     if (arr[i] > arr[i+1]) return false;
 //     return isSorted(arr, n, i+1);
 // }
+
 // int main() {
 //     int arr[5] = {1, 2,3,4,5};
 //     int i = 0, n = 5;
@@ -72,8 +71,21 @@ int lastOccur(vector<int>arr, int target, int i) {
     return idxFound;
 }
 
+void print(int n) {
+    if (n == 0) return;
+
+    cout << n << " ";
+    print(n - 1);
+}
+
 int main() {
     vector<int> arr = {1,2,8,3,4,5};
     // cout << firstOccur(arr, 0, 4);
-    cout << lastOccur(arr, 3, 0);
+    // cout << lastOccur(arr, 3, 0);
+
+    //priting all number from N to 1;
+    
+    print(50);
+
+    return 0;
 }

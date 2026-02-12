@@ -1,8 +1,9 @@
 #include <iostream>
-using namespace std;
 #include <list>
-#include<queue>
-#include<vector>
+#include <queue>
+#include <vector>
+
+using namespace std;
 
 // SOLVING BIPARTITE GRAPH (GRAPH COLORING)
 
@@ -22,19 +23,18 @@ public:
         l[v].push_back(u);
     }
 
-    //print fxn
+
     bool bfsHelper(int src, vector<bool> &vis) {
         queue<int> q;
-        q.push(0);
-        vis[0] = true;
-        color[0] = 0;
+        q.push(src);
+        vis[src] = true;
+        color[src] = 0;
         
-        while(q.size() > 0) {
+        while(!q.empty()) {
             int u = q.front();
             q.pop();
-            list<int> neighbors = l[u];
 
-            for(int v : neighbors) {
+            for(int v : l[u]) {
                 if (!vis[v]) { // for unvisited node by level order
                     vis[v] = true;
                     color[v] = !color[u];
@@ -67,7 +67,7 @@ public:
 
 int main() {
     //Undirected bi-partite
-    int V=4;
+    int V = 4;
     Graph graph(V);
     graph.addEdge(0, 1);
     graph.addEdge(0, 2);
@@ -75,7 +75,7 @@ int main() {
     graph.addEdge(1, 3);
     graph.addEdge(2, 3);
 
-    cout << graph.bfs() << endl;
+    cout << (graph.bfs() ? "Bipartite" : "Not Bipartite") << endl;
 
     return 0;
 }
