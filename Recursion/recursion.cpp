@@ -17,16 +17,17 @@ using namespace std;
 // }
 
 // FIBONACCI NUMBER
-// int fibonacci(int n) {
-//     if (n == 0 || n == 1) {
-//         return n;    
-//     }
-//     return fibonacci(n-1) + fibonacci(n - 2);
-// }
-// int main() {
-//     cout << fibonacci(5);
-//     return 0;
-// }
+int fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return n;    
+    }
+    return fibonacci(n-1) + fibonacci(n - 2);
+}
+
+int main() {
+    cout << fibonacci(6);
+    return 0;
+}
 
 
 
@@ -45,47 +46,47 @@ using namespace std;
 
 
 // first occurrence
-int firstOccur(vector<int>arr, int i, int target) {
-    if (i == arr.size()) {
-        return -1;
-    }
+// int firstOccur(vector<int>arr, int i, int target) {
+//     if (i == arr.size()) {
+//         return -1;
+//     }
 
-    if (arr[i] == target) {
-        return i;
-    }
+//     if (arr[i] == target) {
+//         return i;
+//     }
 
-    return firstOccur(arr, i+1, target);
-}
+//     return firstOccur(arr, i+1, target);
+// }
 
-int lastOccur(vector<int>arr, int target, int i) {
-    if (i == arr.size()) {
-        return -1;
-    }
+// int lastOccur(vector<int>arr, int target, int i) {
+//     if (i == arr.size()) {
+//         return -1;
+//     }
 
-    int idxFound =  lastOccur(arr, target, i+1);
-    if (idxFound ==  -1 && arr[i] == target) {
-        return i;
-    }
+//     int idxFound =  lastOccur(arr, target, i+1);
+//     if (idxFound ==  -1 && arr[i] == target) {
+//         return i;
+//     }
 
 
-    return idxFound;
-}
+//     return idxFound;
+// }
 
-void print(int n) {
-    if (n == 0) return;
+// void print(int n) {
+//     if (n == 0) return;
 
-    cout << n << " ";
-    print(n - 1);
-}
+//     cout << n << " ";
+//     print(n - 1);
+// }
 
-int main() {
-    vector<int> arr = {1,2,8,3,4,5};
-    // cout << firstOccur(arr, 0, 4);
-    // cout << lastOccur(arr, 3, 0);
+// int main() {
+//     vector<int> arr = {1,2,8,3,4,5};
+//     // cout << firstOccur(arr, 0, 4);
+//     // cout << lastOccur(arr, 3, 0);
 
-    //priting all number from N to 1;
+//     //priting all number from N to 1;
     
-    print(50);
+//     // print(50);
 
-    return 0;
-}
+//     return 0;
+// }

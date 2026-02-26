@@ -3,7 +3,7 @@ public:
     vector<vector<int>> ans;
     vector<int> subset;
 
-    void backtrack(vector<int>& nums, int idx) {
+    void (vector<int>& nums, int idx) {
         //bc
         ans.push_back(subset);
 

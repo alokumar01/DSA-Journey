@@ -26,7 +26,7 @@ public:
             if (curr->left != NULL) {
                 q.push(curr->left);
             }
-            if (curr->right != NULL) {
+            if (curr->right != NULL) {xx`x`x`
                 q.push(curr->right);
             }
         }

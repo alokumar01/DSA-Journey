@@ -8,19 +8,19 @@ using namespace std;
 class Graph {
     int V;
     list<pair<int, int>> * l; //int, int : neighbor + wt
-    bool isUndir;
+    // bool isUndir;
 public:
     Graph(int V, bool usUndir = true) {
         this->V = V;
         l = new list<pair<int, int>> [V];
-        this->isUndir = isUndir;
+        // this->isUndir = isUndir;
     }
 
     void addEdge(int u, int v, int wt) {
         l[u].push_back(make_pair(v, wt));
-        if(isUndir) {
+        // if(isUndir) {
             l[v].push_back(make_pair(u, wt));
-        }
+        // }
     }
 
     void primsAlgo(int src) {

@@ -4,6 +4,7 @@ using namespace std;
 #include<list>
 #include<queue>
 #include<stack>
+#include <climits>
 
 class Edge {
 public:
@@ -59,6 +60,6 @@ int main() {
     graph[4].push_back(Edge(3, 2));
     graph[4].push_back(Edge(5, 5));
 
-    dijkstra(3, graph, V);
+    dijkstra(2, graph, V);
     return 0;
 }
