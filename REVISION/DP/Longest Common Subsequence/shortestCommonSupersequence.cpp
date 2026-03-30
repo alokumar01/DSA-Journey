@@ -46,8 +46,8 @@ int superSequence(string &s1, string &s2) {
 
     /*
     dp[i][j] = length of LCS of:
-               first i characters of s1
-               first j characters of s2
+        first i characters of s1
+        first j characters of s2
     */
     vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
 
