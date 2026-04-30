@@ -3,7 +3,7 @@
 ## Daily Rule
 
 - **6 problems per day**
-  - **2 → DP (learning)**
+  - **1 → DP (learning)**
   - **2 → Revision topic**
   - **1 → Mixed random problem**V
 

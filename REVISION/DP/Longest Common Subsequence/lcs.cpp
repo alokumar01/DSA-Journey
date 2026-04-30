@@ -71,8 +71,8 @@ int lcsTabu(string &s1, string &s2, int n, int m) {
 }
 
 int main() {
-    string s1 = "abb";
-    string s2 = "b";
+    string s1 = "abc";
+    string s2 = "ahbgdc";
 
     int n = s1.size();
     int m = s2.size();

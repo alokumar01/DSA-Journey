@@ -45,6 +45,10 @@ void inorder(Node* root) {
     inorder(root->right);
 }
 
+void inorder(Node* root) {
+    if (root == NULL) return;
+}
+
 bool searchBST(Node* root, int key) {
     if (root == NULL) return false;
 
