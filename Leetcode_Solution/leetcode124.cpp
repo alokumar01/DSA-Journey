@@ -30,8 +30,6 @@ public:
     }
 };
 
-
-
 // Binary Tree Maximum Path Sum — Quick Revision
 
 // 1. Core Idea
